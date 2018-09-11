@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập dãy só: ", "");
+    let arrFromNum = num.split("");
+    let outray = [];
+    let numMemory = "";
+    for (let i = 0; i < arrFromNum.length; i++) {
+        if (arrFromNum[i]%2!==0){
+            numMemory +=arrFromNum[i];
+        }else {
+            if (numMemory%2 !== 0){
+                numMemory += arrFromNum[i];
+            } else {
+                numMemory = arrFromNum[i];
+            }
+            outray.push(numMemory);
+        }
+    }
+    alert(outray.join("-"));
+</script>
+</body>
+</html>
